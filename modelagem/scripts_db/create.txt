@@ -1,0 +1,66 @@
+CREATE DATABASE `aprendamos`;
+
+CREATE USER `aprendamos`
+IDENTIFIED BY 'aprendamos';
+
+GRANT ALL PRIVILEGES ON *.* TO `aprendamos`;
+
+CREATE TABLE `Usuario` (
+`id_usuario` INTEGER AUTO_INCREMENT,
+ 	`nome_usuario` VARCHAR(50) NOT NULL,
+`senha`  VARCHAR(50) NOT NULL,
+CONSTRAINT PK_Usuario PRIMARY KEY (`id_usuario`)
+);
+
+CREATE TABLE `Turma` (
+	`id_turma` INTEGER AUTO_INCREMENT,
+	`nome` VARCHAR(50) NOT NULL,
+	`descricao` VARCHAR(400) NOT NULL,
+	`publico` BOOLEAN NOT NULL,
+	CONSTRAINT PK_Turma PRIMARY KEY (`id_turma`)
+);
+
+CREATE TABLE `Participacao` (
+	`usuario_id` INTEGER NOT NULL,
+	`turma_id` INTEGER NOT NULL,
+	`professor` BOOLEAN NOT NULL,
+
+	CONSTRAINT PK_Participacao PRIMARY KEY (`usuario_id`, `turma_id`),
+	CONSTRAINT FK_Participacao_Usuario FOREIGN KEY (`usuario_id`) REFERENCES `Usuario` (`id_usuario`),
+	CONSTRAINT FK_Participacao_Turma FOREIGN KEY (`turma_id`) REFERENCES `Turma` (`id_turma`)	
+);
+
+CREATE TABLE `Publicacao` (
+	`id_publicacao` INTEGER AUTO_INCREMENT,
+	`titulo` VARCHAR(50) NOT NULL,
+	`conteudo` VARCHAR(500) NOT NULL,
+	`usuario_id` INTEGER NOT NULL,
+	`turma_id` INTEGER NOT NULL,
+	`publicacao_id` INTEGER,
+	`data_publicacao` DATE NOT NULL,
+	`data_edicao` DATE,
+	CONSTRAINT PK_Publicacao PRIMARY KEY (`id_publicacao`),
+	CONSTRAINT FK_Publicacao_Participacao FOREIGN KEY (`usuario_id`, `turma_id`) REFERENCES `Participacao` (`usuario_id`, `turma_id`),
+	CONSTRAINT FK_Publicacao_Publicacao FOREIGN KEY (`publicacao_id`) REFERENCES `Publicacao` (`id_publicacao`)
+);
+
+CREATE TABLE `Atividade` (
+	`id_atividade` INTEGER NOT NULL AUTO_INCREMENT,
+	`nome` VARCHAR(50) NOT NULL,
+	`descricao` VARCHAR(400) NOT NULL,
+	`usuario_id` INTEGER NOT NULL,
+	`data_entrega` DATE,
+	`status` ENUM ('aberto', 'correcao', 'terminado'),
+	CONSTRAINT PK_Atividade PRIMARY KEY (`id_atividade`),
+	CONSTRAINT FK_Atividade_Usuario FOREIGN KEY (`usuario_id`) REFERENCES `Usuario` (`id_usuario`)
+);
+
+CREATE TABLE `Atividade_Participacao` (
+	`usuario_id` INTEGER NOT NULL,
+	`turma_id` INTEGER NOT NULL,
+	`atividade_id` INTEGER NOT NULL,
+	`nota` DOUBLE(4,2),
+	CONSTRAINT PK_Atividade_Participacao PRIMARY KEY (`usuario_id`, `turma_id`, `atividade_id`),
+	CONSTRAINT FK_Atividade_Participacao_Participacao FOREIGN KEY (`usuario_id`, `turma_id`) REFERENCES `Participacao` (`usuario_id`, `turma_id`),
+	CONSTRAINT FK_Atividade_Participacao_Atividade FOREIGN KEY (`atividade_id`) REFERENCES `Atividade` (`id_atividade`)
+);

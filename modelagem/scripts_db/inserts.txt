@@ -1,0 +1,404 @@
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('admin', MD5('admin'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Yugi', MD5('Muto'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Seto', MD5('Kaiba'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Mokuba', MD5('Kaiba'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Tea', MD5('Gardner'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Joey', MD5('Wheeler'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Yuma', MD5('Tsukumo'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Ikki', MD5('Fenix'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Jaden', MD5('Yuki'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Syrus', MD5('Truesdale'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Alexis', MD5('Rhodes'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Chazz', MD5('Princeton'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Bastion', MD5('Misawa'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Yusei', MD5('Fudo'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Crow', MD5('Hogan'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Jack', MD5('Atlas'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Akiza', MD5('Izinski'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Leo', MD5('Luna'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Keith', MD5('Bandit'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Bonz', MD5('Ghost'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Bakura', MD5('Yami'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Marik', MD5('Yami'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Pegasus', MD5('Crawford'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Tetsu', MD5('Trudge'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Blair', MD5('Flannigan'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Ishizu', MD5('Ishtar'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Mai', MD5('Valentine'));
+INSERT INTO `usuario`(`nome_usuario`, `senha`)
+VALUES ('Jesse', MD5('Anderson'));
+
+INSERT INTO `turma`(`nome`, `descricao`, `publico`)
+VALUES ('Aulas de histéria', 'Turma para as aulas de histéria da escola', 1);
+INSERT INTO `turma`(`nome`, `descricao`, `publico`)
+VALUES ('Aulas de PWII', 'Turma para as aulas de PWII', 0);
+INSERT INTO `turma`(`nome`, `descricao`, `publico`)
+VALUES ('Aulas de SO', 'Turma para as aulas de SO', 1);
+INSERT INTO `turma`(`nome`, `descricao`, `publico`)
+VALUES ('Aulas de POO', 'Turma para as aulas de POO', 1);
+INSERT INTO `turma`(`nome`, `descricao`, `publico`)
+VALUES ('Aulas de DB', 'Turma para as aulas de DB', 0);
+
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (2, 2, 1);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (3, 2, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (4, 2, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (5, 2, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (6, 2, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (9, 3, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (10, 3, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (11, 3, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (12, 3, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (13, 3, 1);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (25, 3, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (14, 4, 1);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (15, 4, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (16, 4, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (17, 4, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (18, 4, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (24, 4, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (19, 5, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (20, 5, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (21, 5, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (22, 5, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (23, 5, 1);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (22, 1, 0);
+INSERT INTO `participacao`(`usuario_id`, `turma_id`, `professor`)
+VALUES (23, 1, 1);
+
+
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Agenda 2030', 'Atividade alinhada aos objetivos da Agenda 2030', 2, STR_TO_DATE('10/12/2019', '%d/%m/%Y'), 'Aberto');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Trabalho integrador', 'Desenvolver um sistema de software para um cliente real', 2, STR_TO_DATE('26/11/2019', '%d/%m/%Y'), 'Aberto');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Apresentaééo PMBOK', 'Apresentar dois capétulos do PMBOK', 2, STR_TO_DATE('12/11/2019', '%d/%m/%Y'), 'Terminado');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Trabalho das apostas', 'Desenvolver aplicativo de apostas esportivas', 2, STR_TO_DATE('10/12/2019', '%d/%m/%Y'), 'Aberto');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Trabalho préximo', 'Teste de trabalho préximo', 2, SYSDATE() + 2, 'Aberto');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Trabalho préximo 2', 'Teste de trabalho préximo 2', 2, SYSDATE() + 2, 'Aberto');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Trabalho aberto', 'Teste trabalho aberto', 2, SYSDATE() + 4, 'Aberto');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Trabalho correcao', 'Teste de trabalho correcao', 2, SYSDATE() - 3, 'Correcao');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Outro aberto', 'Outro teste aberto', 2, SYSDATE(), 'Aberto');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Mais um aberto', 'Mais um trabalho aberto', 2, SYSDATE() + 1, 'Aberto');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Trabalho terminado', 'Esse trabalho jé foi terminado', 2, SYSDATE() - 7, 'Terminado');
+
+INSERT INTO `Atividade`(`nome`, `descricao`, `usuario_id`, `data_entrega`, `status`)
+VALUES ('Trabalho em correééo', 'Esse trabalho esté sendo corrigido', 2, SYSDATE() - 1, 'Correcao');
+
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (2, 2, 1);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (2, 2, 2);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (2, 2, 3);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (2, 2, 4);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (2, 2, 5);
+
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (13, 3, 2);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (13, 3, 3);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (13, 3, 4);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (13, 3, 5);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (13, 3, 6);
+
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (14, 4, 3);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (14, 4, 4);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (14, 4, 5);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (14, 4, 6);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (14, 4, 7);
+
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (23, 5, 4);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (23, 5, 5);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (23, 5, 6);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (23, 5, 7);
+INSERT INTO `Atividade_Participacao`(`usuario_id`, `turma_id`, `atividade_id`)
+VALUES (23, 5, 8);
+
+
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 4, 2, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 5, 2, 1, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 2, 2, 1, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 2, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 2, 2, 4, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 4, 2, 4, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 5, 2, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 2, 2, 7, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 3, 2, 7, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 5, 2, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 2, 2, 10, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 6, 2, 10, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 6, 2, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 2, 2, 13, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 3, 2, 13, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 5, 2, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 2, 2, 16, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 6, 2, 16, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 4, 2, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 2, 2, 19, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 3, 2, 19, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 5, 2, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 2, 2, 22, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 6, 2, 22, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 4, 2, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 2, 2, 25, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 3, 2, 25, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 6, 2, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 2, 2, 30, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é kernel?', 'Néo sei', 5, 2, 30, SYSDATE());
+
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é MVC?', 'Perguntei o que é MVC?', 4, 3, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é MVC?', 'Néo sei', 5, 3, 1, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 3, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 3, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 3, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 3, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 3, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 3, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 3, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 3, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 3, SYSDATE());
+
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é MVC?', 'Perguntei o que é MVC?', 4, 4, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é MVC?', 'Néo sei', 5, 4, 1, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 4, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 4, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 4, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 4, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 4, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 4, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 4, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 4, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 4, SYSDATE());
+
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é MVC?', 'Perguntei o que é MVC?', 4, 5, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é MVC?', 'Néo sei', 5, 5, 1, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 5, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 5, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 5, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 5, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 5, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 5, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 5, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 5, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 5, SYSDATE());
+
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é MVC?', 'Perguntei o que é MVC?', 4, 6, SYSDATE());
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `publicacao_id`,  `data_publicacao`)
+VALUES ('Re: O que é MVC?', 'Néo sei', 5, 6, 1, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 6, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 6, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 6, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 6, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 6, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 6, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 6, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 6, SYSDATE());
+
+INSERT INTO `publicacao`(`titulo`, `conteudo`, `usuario_id`, `turma_id`, `data_publicacao`)
+VALUES ('O que é kernel?', 'Alguém pode me explicar o que é kernel?', 3, 6, SYSDATE());
+
+
