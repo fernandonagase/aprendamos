@@ -1,0 +1,20 @@
+<div>
+    <h5>Responder dúvida</h5>
+    <hr />
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <form action="/aprendamos/forum/index/{@questionId}/reply?classroom={@classroomId}" method="POST">
+            <div class="form-group">
+                <label for="input-title">Dúvida:</label>
+                <input type="text" name="title" placeholder="Ex.: O que é Model em MVC?" value="{@title}" class="form-control" id="input-title" readonly />
+            </div>
+            <div class="form-group">
+                <label for="input-description">Resposta:</label>
+                <textarea name="description" rows="4" placeholder="Ex.: Não entendi direito o conceito de Model" class="form-control" id="input-description"></textarea>
+            </div>
+            <a href="/aprendamos/forum/index/{@questionId}?classroom={@classroomId}" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-primary">Responder</button>
+        </form>
+    </div>
+</div>
