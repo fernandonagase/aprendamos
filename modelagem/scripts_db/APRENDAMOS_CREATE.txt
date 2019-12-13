@@ -1,0 +1,67 @@
+CREATE USER `aprendamos`
+IDENTIFIED BY 'aprendamos';
+
+GRANT ALL PRIVILEGES ON *.* TO `aprendamos`@localhost;
+
+-- DROP DATABASE `aprendamos`;
+CREATE DATABASE `aprendamos`;
+
+CREATE TABLE `User` (
+	`id_user` INTEGER AUTO_INCREMENT,
+	`name` VARCHAR(100),
+	`username` VARCHAR(100) NOT NULL UNIQUE,
+	`password` VARCHAR(100) NOT NULL,
+	CONSTRAINT PK_User PRIMARY KEY (`id_user`)
+);
+
+CREATE TABLE `Classroom` (
+	`id_classroom` INTEGER AUTO_INCREMENT,
+	`name` VARCHAR(100) NOT NULL,
+	`description` VARCHAR(500),
+	CONSTRAINT PK_Classroom PRIMARY KEY (`id_classroom`)
+);
+
+CREATE TABLE `Enrollment` (
+	`user_id` INTEGER,
+	`classroom_id` INTEGER,
+	`professor` BOOLEAN NOT NULL,
+	CONSTRAINT PK_Enrollment PRIMARY KEY (`user_id`, `classroom_id`),
+	CONSTRAINT FK_Enrollment_User FOREIGN KEY (`user_id`) REFERENCES `User` (`id_user`),
+	CONSTRAINT FK_Enrollment_Classroom FOREIGN KEY (`classroom_id`) REFERENCES `Classroom` (`id_classroom`)
+);
+
+CREATE TABLE `Post` (
+	`id_post` INTEGER AUTO_INCREMENT,
+	`title` VARCHAR(100) NOT NULL,
+	`content` VARCHAR(500) NOT NULL,
+	`post_id` INTEGER,
+	`user_id` INTEGER NOT NULL,
+	`classroom_id` INTEGER NOT NULL,
+	`publicated_date` DATE NOT NULL,
+	`edited_date` DATE,
+	CONSTRAINT PK_Post PRIMARY KEY (`id_post`),
+	CONSTRAINT FK_Post_Post FOREIGN KEY (`post_id`) REFERENCES `Post` (`id_post`),
+	CONSTRAINT FK_Post_Enrollment FOREIGN KEY (`user_id`, `classroom_id`) REFERENCES `Enrollment` (`user_id`, `classroom_id`)
+);
+
+CREATE TABLE `Assignment` (
+	`id_assignment` INTEGER AUTO_INCREMENT,
+	`name` VARCHAR(100) NOT NULL,
+	`description` VARCHAR(500) NOT NULL,
+	`user_id` INTEGER NOT NULL,
+	`classroom_id` INTEGER NOT NULL,
+	`deadline` DATE NOT NULL,
+	`status` ENUM ('aberto', 'correcao', 'terminado') NOT NULL,
+	CONSTRAINT PK_Assignment PRIMARY KEY (`id_assignment`),
+	CONSTRAINT FK_Assignment_Enrollment FOREIGN KEY (`user_id`, `classroom_id`) REFERENCES `Enrollment` (`user_id`, `classroom_id`)
+);
+
+CREATE TABLE `Report` (
+	`user_id` INTEGER,
+	`classroom_id` INTEGER,
+	`assignment_id` INTEGER,
+	`grade` FLOAT NOT NULL,
+	CONSTRAINT PK_Report PRIMARY KEY (`user_id`, `classroom_id`, `assignment_id`),
+	CONSTRAINT FK_Report_Enrollment FOREIGN KEY (`user_id`, `classroom_id`) REFERENCES `Enrollment` (`user_id`, `classroom_id`),
+	CONSTRAINT FK_Report_Assignment FOREIGN KEY (`assignment_id`) REFERENCES `Assignment` (`id_assignment`)
+);
