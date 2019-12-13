@@ -11,6 +11,9 @@ O software permitirá o gerenciamento de atividades escolares, por meio do regis
 3. Inserir registros de teste no banco de dados (modelagem/scripts_db/APRENDAMOS_INSERTS.txt)
 4. Acessar página de cadastro (aprendamos/auth/signup) ou de login (aprendamos/auth/login)
 
+## Apresentação
+[Vídeo no YouTube](https://youtu.be/csHfJxKqw7Q)
+
 ## Integrantes:
 * Fernando Nagase 830285
 * Nicolas Pereira Silva 830463
