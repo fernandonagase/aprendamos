@@ -1,4 +1,4 @@
-CREATE USER `aprendamos`
+CREATE USER `aprendamos`@localhost
 IDENTIFIED BY 'aprendamos';
 
 GRANT ALL PRIVILEGES ON *.* TO `aprendamos`@localhost;
