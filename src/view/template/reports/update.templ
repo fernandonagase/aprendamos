@@ -1,0 +1,10 @@
+<div>
+    <h5>Editar correção</h5>
+    <hr />
+</div>
+<form action="/aprendamos/reports/update?classroom={@classroomId}&assignment={@assignmentId}" method="POST">
+    <div class="row">
+        {@gradeForms}
+    </div>
+    <button type="submit" class="btn btn-primary">Corrigir</button>
+</form>
