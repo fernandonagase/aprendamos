@@ -1,0 +1,20 @@
+<div>
+    <h5>Editar dados da turma</h5>
+    <hr />
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <form action="/aprendamos/classrooms/update/{@classroomId}" method="POST">
+            <div class="form-group">
+                <label for="id-name">Nome da turma:</label>
+                <input type="text" name="name" placeholder="Ex.: Turma de matemática da escola" value="{@classroomName}" class="form-control" id="id-name" />
+            </div>
+            <div class="form-group">
+                <label for="id-description">Descrição da turma:</label>
+                <textarea name="description" rows="4" placeholder="Ex.: Turma criada para discutir as aulas de matemática da escola" class="form-control" id="id-description">{@classroomDescription}</textarea>
+            </div>
+            <a href="/aprendamos/classrooms/index/{@classroomId}" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+        </form>
+    </div>
+</div>
