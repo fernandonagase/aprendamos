@@ -1,0 +1,21 @@
+.margin-content {
+    margin-top: 40px;
+}
+
+.margin-options-pane {
+    margin: 20px 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Authentication */
+
+.logo-auth {
+    margin: 20px 0;
+}
+
+.container-auth {
+    padding: 30px;
+}

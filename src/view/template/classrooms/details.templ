@@ -1,0 +1,83 @@
+<div>
+    <h5>{@className}</h5>
+    <hr />
+</div>
+{@options}
+<div class="row">
+    <div class="col-md-3 border rounded py-3">
+        <div>
+            <h5>Participantes da turma</h5>
+            <hr />
+        </div>
+        <ul class="list-group list-group-flush">
+            {@enrollments}
+            <li class="list-group-item"><a href="/aprendamos/enrollments/index?classroomId={@classroomId}">Visualizar todos</a></li>
+        </ul>
+    </div>
+    <div class="col-md-9">
+        <div class="row mb-3">
+            <div class="col-md border rounded pt-3 ml-3">
+                <div>
+                    <h5>Próximas atividades</h5>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Atividade</th>
+                            <th>Data de entrega</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {@assignments}
+                        <tr>
+                            <td colspan="3"><a href="/aprendamos/assignments/index?classroom={@classroomId}">Visualizar todas</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md border rounded pt-3 ml-3">
+                <div>
+                    <h5>Dúvidas recentes</h5>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Dúvida</th>
+                            <th>Autor</th>
+                            <th>Publicado em</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {@posts}
+                        <tr>
+                            <td colspan="3"><a href="/aprendamos/forum/index?classroom={@classroomId}">Visualizar todas</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal-confirm-removal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Exclusão de turma</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Realmente deseja excluir esta turma?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <a href="/aprendamos/classrooms/remove/{@classroomId}" class="btn btn-danger">Excluir</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div>
+    <h5>Nova turma</h5>
+    <hr />
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <form action="/aprendamos/classrooms/create?classroom={@classroomId}" method="POST">
+            <div class="form-group">
+                <label for="input-name">Nome da turma:</label>
+                <input type="text" name="name" placeholder="Ex.: Turma de matemática da escola" class="form-control" id="input-name" />
+            </div>
+            <div class="form-group">
+                <label for="input-description">Descrição da turma:</label>
+                <textarea name="description" rows="4" placeholder="Ex.: Turma criada para discutir as aulas de matemática da escola" class="form-control" id="input-description"></textarea>
+            </div>
+            <a href="/aprendamos/classrooms/index" class="btn btn-secondary">Cancelar</a>
+            <button type="submit" class="btn btn-primary">Criar</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="row d-flex justify-content-center margin-content">
+    <img src="/aprendamos/src/view/template/shared/img/logo.png" height="48" alt="Logo Aprendamos" class="logo-auth" />
+</div>
+<div class="row d-flex justify-content-center margin-content">
+    <div class="col-md-4 container-auth border rounded">
+        <h5>Cadastre-se</h5>
+        <hr />
+        <form action="/aprendamos/auth/signup" method="POST">
+            <div class="form-group">
+                <label for="input-name">Nome</label>
+                <input type="text" name="name" class="form-control" id="input-name" />
+            </div>
+            <div class="form-group">
+                <label for="input-username">Nome de usuário</label>
+                <input type="text" name="username" class="form-control" id="input-username" />
+            </div>
+            <div class="form-group">
+                <label for="input-password">Palavra-passe</label>
+                <input type="password" name="password" class="form-control" id="input-password" />
+            </div>
+            <div class="form-group">
+                <label for="input-password-conf">Confirme a palavra-passe</label>
+                <input type="password" name="passwordConf" class="form-control" id="input-password-conf" />
+            </div>
+            <button type="submit" class="btn btn-block btn-primary">Cadastrar</button>
+        </form>
+    </div>
+</div>
